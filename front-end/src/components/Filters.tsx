@@ -128,10 +128,10 @@ const Filters = ({ setFilters, setDateRange, filters, dateRange}: Props) => {
 
   return (
     <section>
-      <h2 className="text-xl font-bold mb-4">Filters</h2>
+      <h2 className="text-xl font-bold mb-4">Visualization Charts</h2>
 
-      <p className="text-sm text-gray-600 mb-4">
-        Note: Data is available only from <strong>04 Oct 2022</strong> to <strong>29 Oct 2022</strong>.
+      <p className="text-sm text-gray-600 mt-4 mb-4">
+        Note: Data is available only from <strong>04 Oct 2022</strong> to <strong>14 Oct 2022</strong>.
       </p>
 
       {showMessage && (

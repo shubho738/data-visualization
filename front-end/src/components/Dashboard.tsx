@@ -10,8 +10,8 @@ import { useAnalyticsData } from '../hooks/useAnalyticsData'
 
 const Dashboard = () => {
 
-  const defaultEndDate = "2022-10-15"
-  const defaultStartDate = "2022-10-04"
+  const defaultEndDate = "2022-10-10"
+  const defaultStartDate = "2022-10-10"
 
   const location = useLocation()
   const params = new URLSearchParams(location.search)
