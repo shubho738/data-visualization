@@ -130,6 +130,10 @@ const Filters = ({ setFilters, setDateRange, filters, dateRange}: Props) => {
     <section>
       <h2 className="text-xl font-bold mb-4">Filters</h2>
 
+      <p className="text-sm text-gray-600 mb-4">
+        Note: Data is available only from <strong>04 Oct 2022</strong> to <strong>29 Oct 2022</strong>.
+      </p>
+
       {showMessage && (
         <aside>
           <div className="bg-yellow-200 text-yellow-800 p-2 rounded mb-2">
