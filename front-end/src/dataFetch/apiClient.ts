@@ -9,7 +9,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || ''
 export const registerUser = async (formData: RegisterFormData) => {
 
   try {
-    await axios.post(`${API_BASE_URL}/auth/register`, {
+    await axios.post(`${API_BASE_URL}/api/auth/register`, {
       ...formData
     }, {
       withCredentials: true
@@ -30,7 +30,7 @@ export const registerUser = async (formData: RegisterFormData) => {
 export const signInUser = async (formData: SignInFormData) => {
 
   try {
-    await axios.post(`${API_BASE_URL}/auth/sign-in`, {
+    await axios.post(`${API_BASE_URL}/api/auth/sign-in`, {
       ...formData
     }, {
       withCredentials: true
@@ -50,7 +50,7 @@ export const signInUser = async (formData: SignInFormData) => {
 export const signOutUser = async () => {
 
   try {
-    await axios.post(`${API_BASE_URL}/auth/sign-out`, {}, {
+    await axios.post(`${API_BASE_URL}/api/auth/sign-out`, {}, {
       withCredentials: true
     })
   }
@@ -70,7 +70,7 @@ export const signOutUser = async () => {
 export const verifyToken = async () => {
 
   try {
-    const res = await axios.get(`${API_BASE_URL}/auth/verify-token`, {
+    const res = await axios.get(`${API_BASE_URL}/api/auth/verify-token`, {
       withCredentials: true
     })
     return res.data
@@ -107,7 +107,7 @@ export const fetchAnalyticsData = async (filters: Filter, dateRange: DateRange) 
       ...dateRange
     }
 
-    const res = await axios.get(`${API_BASE_URL}/data`, {params})
+    const res = await axios.get(`${API_BASE_URL}/api/data`, {params})
     
     return res.data
   }
@@ -128,7 +128,7 @@ export const savePreferences = async (filters: Filter, dateRange: DateRange) => 
 
   try {
 
-    const res = await axios.post(`${API_BASE_URL}/preferences`, {filters, dateRange}, 
+    const res = await axios.post(`${API_BASE_URL}/api/preferences`, {filters, dateRange}, 
     {withCredentials: true})
     
     return res.data
@@ -149,7 +149,7 @@ export const fetchPreferences = async () => {
 
   try {
 
-    const res = await axios.get(`${API_BASE_URL}/preferences`, {withCredentials: true})
+    const res = await axios.get(`${API_BASE_URL}/api/preferences`, {withCredentials: true})
     
     return res.data
   }
@@ -169,7 +169,7 @@ export const clearPreferences = async () => {
 
   try {
 
-    await axios.delete(`${API_BASE_URL}/preferences`, {withCredentials: true})
+    await axios.delete(`${API_BASE_URL}/api/preferences`, {withCredentials: true})
   }
 
   catch(err: any) {
